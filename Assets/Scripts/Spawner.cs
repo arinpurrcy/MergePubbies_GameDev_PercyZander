@@ -56,9 +56,4 @@ public class Spawner : MonoBehaviour
             yield return null;
         }
     }
-
-    public void UpgradePubby()
-    {
-
-    }
 }
