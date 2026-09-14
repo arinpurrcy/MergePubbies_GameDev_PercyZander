@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//<summary> This script is used with the Spawner! It tracks the players mouseX and spawns Pubbies. - Zander :3 </summary>
 public class Spawner : MonoBehaviour
 {
     float currentX;
