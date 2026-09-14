@@ -53,7 +53,6 @@ public class Spawner : MonoBehaviour
     {
         if (context.performed && lastSpawnTime >= cooldown)
         {
-            Debug.Log("Spawned Pubby: " + currentPubby);
             Instantiate(pubbyPrefab, transform.position, Quaternion.identity);
             StartCoroutine(ChangeCurrentPubby());
         }
