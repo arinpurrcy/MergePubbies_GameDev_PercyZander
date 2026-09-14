@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,8 @@ public class Spawner : MonoBehaviour
 
     float minX;
     float maxX;
+    float cooldown = .5f;
+    float lastSpawnTime;
 
     public GameObject testObject;
 
@@ -17,6 +20,9 @@ public class Spawner : MonoBehaviour
         currentX = 0;
         minX = -5f;
         maxX = 5f;
+        lastSpawnTime = cooldown;
+        
+        StartCoroutine(CooldownTimer());
     }
 
     private void Update()
@@ -34,6 +40,25 @@ public class Spawner : MonoBehaviour
 
     public void SpawnObject(InputAction.CallbackContext context)
     {
-        if (context.performed) Instantiate(testObject, transform.position, Quaternion.identity);
+        if (context.performed && lastSpawnTime >= cooldown)
+        {
+            Instantiate(testObject, transform.position, Quaternion.identity);
+            lastSpawnTime = 0f;
+        }
+    }
+
+    IEnumerator CooldownTimer()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(.1f);
+            lastSpawnTime += .1f;
+            yield return null;
+        }
+    }
+
+    public void UpgradePubby()
+    {
+
     }
 }
