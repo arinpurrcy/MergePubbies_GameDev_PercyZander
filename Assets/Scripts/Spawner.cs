@@ -5,23 +5,34 @@ using UnityEngine.InputSystem;
 //<summary> This script is used with the Spawner! It tracks the players mouseX and spawns Pubbies. - Zander :3 </summary>
 public class Spawner : MonoBehaviour
 {
-    float currentX;
-    Vector3 mousePos;
+    private float currentX;
+    private Vector3 mousePos;
 
-    float minX;
-    float maxX;
-    float cooldown = .5f;
-    float lastSpawnTime;
+    private float minX;
+    private float maxX;
+    private float cooldown = .5f;
+    private float lastSpawnTime;
 
-    public GameObject testObject;
+    public int currentPubby = 9;
+    private int nextPubby;
+
+    public GameObject pubbyPrefab;
+
+    private ServiceHub serviceHub;
 
     private void Start()
     {
+        serviceHub = ServiceHub.Instance;
+
         currentX = 0;
         minX = -5f;
         maxX = 5f;
         lastSpawnTime = cooldown;
-        
+
+        currentPubby = Random.Range(6, 10);
+        nextPubby = Random.Range(6, 10);
+        gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubby];
+
         StartCoroutine(CooldownTimer());
     }
 
@@ -42,9 +53,19 @@ public class Spawner : MonoBehaviour
     {
         if (context.performed && lastSpawnTime >= cooldown)
         {
-            Instantiate(testObject, transform.position, Quaternion.identity);
-            lastSpawnTime = 0f;
+            Debug.Log("Spawned Pubby: " + currentPubby);
+            Instantiate(pubbyPrefab, transform.position, Quaternion.identity);
+            StartCoroutine(ChangeCurrentPubby());
         }
+    }
+
+    private IEnumerator ChangeCurrentPubby()
+    {
+        yield return new WaitForSeconds(.01f);
+        currentPubby = nextPubby;
+        nextPubby = Random.Range(6, 10);
+        gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubby];
+        lastSpawnTime = 0f;
     }
 
     IEnumerator CooldownTimer()

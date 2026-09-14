@@ -9,9 +9,13 @@ public class MergeLogic : MonoBehaviour
     public Sprite[] pubbySprites;
     private int currentPubbyIndex;
 
+    private ServiceHub serviceHub;
+
     private void Start()
     {
-        currentPubbyIndex = 9; //Will eventually be random
+        serviceHub = ServiceHub.Instance;
+
+        currentPubbyIndex = serviceHub.Spawner.currentPubby; //Will eventually be random
         UpdatePubbyInformation();
     }
 
@@ -30,11 +34,8 @@ public class MergeLogic : MonoBehaviour
     private void UpgradePubby()
     {
         currentPubbyIndex--;
-        if(currentPubbyIndex < 0)
-        {
-            Destroy(gameObject);
-        }
-        UpdatePubbyInformation();
+        if(currentPubbyIndex < 0) Destroy(gameObject);
+        else UpdatePubbyInformation();
     }
 
     private void UpdatePubbyInformation()
@@ -42,5 +43,6 @@ public class MergeLogic : MonoBehaviour
         tag = pubbyTags[currentPubbyIndex];
         gameObject.GetComponent<CircleCollider2D>().radius = pubbyRadius[currentPubbyIndex];
         gameObject.GetComponent<SpriteRenderer>().sprite = pubbySprites[currentPubbyIndex];
+        gameObject.GetComponent<SpriteRenderer>().sortingOrder = currentPubbyIndex;
     }
 }

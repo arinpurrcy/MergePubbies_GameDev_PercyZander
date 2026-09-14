@@ -7,8 +7,10 @@ public class ServiceHub : MonoBehaviour
 
     [Header("System References")]
     [SerializeField] private Spawner spawner;
+    [SerializeField] private MergeLogic mergelogic;
 
     public Spawner Spawner => spawner;
+    public MergeLogic MergeLogic => mergelogic;
 
     private void Awake()
     {
