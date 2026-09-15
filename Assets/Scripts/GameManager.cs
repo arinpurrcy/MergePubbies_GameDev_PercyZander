@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//<summary> For now, this script just handles keeping track of the Score. - Zander :3 </summary>
 public class GameManager : MonoBehaviour
 {
     public int currentScore = 0;

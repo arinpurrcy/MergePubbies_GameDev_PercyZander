@@ -15,6 +15,8 @@ public class Spawner : MonoBehaviour
 
     public int currentPubby = 9;
     private int nextPubby;
+    public (int,int) evilPubbyChance = (1, 100);
+    public bool isEvilPubby = false;
 
     public GameObject pubbyPrefab;
 
@@ -29,7 +31,7 @@ public class Spawner : MonoBehaviour
         maxX = 5f;
         lastSpawnTime = cooldown;
 
-        currentPubby = Random.Range(6, 10);
+        currentPubby = 9;
         nextPubby = Random.Range(6, 10);
         gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubby];
 
@@ -63,7 +65,19 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(.01f);
         currentPubby = nextPubby;
         nextPubby = Random.Range(6, 10);
-        gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubby];
+
+        int evilChance = Random.Range(1, evilPubbyChance.Item2 + 1); //The +1 is because the Max is exlusive in Random.Range
+        if (evilChance == 1)
+        {
+            isEvilPubby = true;
+            gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.EvilPubbySprites[currentPubby];
+        }
+        else
+        {
+            isEvilPubby = false;
+            gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubby];
+        }
+            
         lastSpawnTime = 0f;
     }
 
