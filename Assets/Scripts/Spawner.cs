@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
 {
     private float currentX;
     private Vector3 mousePos;
+    private bool canSpawn = true;
 
     private float minX;
     private float maxX;
@@ -53,7 +54,7 @@ public class Spawner : MonoBehaviour
 
     public void SpawnObject(InputAction.CallbackContext context)
     {
-        if (context.performed && lastSpawnTime >= cooldown)
+        if (context.performed && lastSpawnTime >= cooldown && canSpawn)
         {
             Instantiate(pubbyPrefab, transform.position, Quaternion.identity);
             StartCoroutine(ChangeCurrentPubby());
@@ -89,5 +90,10 @@ public class Spawner : MonoBehaviour
             lastSpawnTime += .1f;
             yield return null;
         }
+    }
+
+    public void GameOver()
+    {
+        canSpawn = false;
     }
 }

@@ -15,19 +15,28 @@ public class MergeLogic : MonoBehaviour
     private ServiceHub serviceHub;
 
     public float expandSpeed;
-    private bool isEvilPubby = false;
+    public bool isEvilPubby = false;
+
+    private ParticleSystem greenAura;
 
     private void Start()
     {
         serviceHub = ServiceHub.Instance;
 
-        if (serviceHub.Spawner.isEvilPubby) isEvilPubby = true;
+        greenAura = gameObject.GetComponentInChildren<ParticleSystem>();
+        greenAura.Stop();
+
+        if (serviceHub.Spawner.isEvilPubby)
+        {
+            isEvilPubby = true;
+            greenAura.Play();
+        }
 
         currentPubbyIndex = serviceHub.Spawner.currentPubby;
         UpdatePubbyInformation();
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision) //For Collision between Pubbies
     {
         if(collision.gameObject.CompareTag(gameObject.tag)) //Makes sure tags match
         {
@@ -43,6 +52,7 @@ public class MergeLogic : MonoBehaviour
     private void UpgradePubby()
     {
         isEvilPubby = false;
+        greenAura.Stop();
         currentPubbyIndex--;
         if(currentPubbyIndex < 0) Destroy(gameObject);
         else UpdatePubbyInformation();
@@ -66,10 +76,12 @@ public class MergeLogic : MonoBehaviour
 
     IEnumerator ExpandRadius()
     {
-        while (true)
+        var shape = greenAura.shape;
+        while (isEvilPubby)
         {
             yield return new WaitForSeconds(expandSpeed);
             gameObject.GetComponent<CircleCollider2D>().radius += .01f;
+            shape.radius += .01f;
         }
     }
 }
