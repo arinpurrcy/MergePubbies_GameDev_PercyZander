@@ -15,11 +15,16 @@ public class Spawner : MonoBehaviour
     private float lastSpawnTime;
 
     public int currentPubby = 9;
-    private int nextPubby;
+    public int nextPubby;
     public (int,int) evilPubbyChance = (1, 100);
     public bool isEvilPubby = false;
 
     public GameObject pubbyPrefab;
+    public GameObject nextPubbySpawner;
+    public GameObject nextPubbyPrefab;
+    public GameObject nextPubbyDeleter; //Deletes the pubby on the Slope when a new one is spawned
+
+    private GameObject clone;
 
     private ServiceHub serviceHub;
 
@@ -35,6 +40,8 @@ public class Spawner : MonoBehaviour
         currentPubby = 9;
         nextPubby = Random.Range(6, 10);
         gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubby];
+
+        clone = Instantiate(nextPubbyPrefab, nextPubbySpawner.transform.position, Quaternion.identity);
 
         StartCoroutine(CooldownTimer());
     }
@@ -58,6 +65,8 @@ public class Spawner : MonoBehaviour
         {
             Instantiate(pubbyPrefab, transform.position, Quaternion.identity);
             StartCoroutine(ChangeCurrentPubby());
+            Destroy(clone.gameObject);
+            //StartCoroutine(DeleteNextPubby());
         }
     }
 
@@ -66,8 +75,9 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(.01f);
         currentPubby = nextPubby;
         nextPubby = Random.Range(6, 10);
+        clone = Instantiate(nextPubbyPrefab, nextPubbySpawner.transform.position, Quaternion.identity);
 
-        int evilChance = Random.Range(1, evilPubbyChance.Item2 + 1); //The +1 is because the Max is exlusive in Random.Range
+        int evilChance = Random.Range(1, evilPubbyChance.Item2+1); //The +1 is because the Max is exlusive in Random.Range
         if (evilChance == 1)
         {
             isEvilPubby = true;
@@ -90,6 +100,13 @@ public class Spawner : MonoBehaviour
             lastSpawnTime += .1f;
             yield return null;
         }
+    }
+
+    IEnumerator DeleteNextPubby()
+    {
+        nextPubbyDeleter.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        nextPubbyDeleter.SetActive(false);
     }
 
     public void GameOver()
