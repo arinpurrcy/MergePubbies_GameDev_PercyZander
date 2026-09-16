@@ -39,7 +39,6 @@ public class GameOverTrigger : MonoBehaviour
             if(isTriggerStay) currentCountDown++;
             if (currentCountDown >= maxCountDown)
             {
-                Debug.Log("Game Over Triggered!");
                 floor.SetActive(false);
                 serviceHub.Spawner.GameOver();
                 yield break;

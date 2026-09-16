@@ -14,6 +14,7 @@ TagManager:
   - Dasch
   - Pom
   - Malt
+  - Floor
   layers:
   - Default
   - TransparentFX

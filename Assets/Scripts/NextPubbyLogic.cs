@@ -18,9 +18,4 @@ public class NextPubbyLogic : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubbyIndex]; //Pubby on Slope will not show that it's evil
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = currentPubbyIndex;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(gameObject); //The spawner will enable a GameObject with a trigger for a split second, destroying the current Pubby on the Slope
-    }
 }

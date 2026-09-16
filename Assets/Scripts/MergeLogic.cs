@@ -36,9 +36,18 @@ public class MergeLogic : MonoBehaviour
         UpdatePubbyInformation();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Floor")) //Makes sure the Pubby doesn't just roll all the time
+        {
+            float direction = Random.Range(-1f, 1f);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * 0.5f, ForceMode2D.Impulse);
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision) //For Collision between Pubbies
     {
-        if(collision.gameObject.CompareTag(gameObject.tag)) //Makes sure tags match
+        if (collision.gameObject.CompareTag(gameObject.tag)) //Makes sure tags match
         {
             if (gameObject.GetInstanceID() > collision.gameObject.GetInstanceID()) //This makes sure the method is only called once for each collision
             {
