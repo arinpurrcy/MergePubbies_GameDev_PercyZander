@@ -5,6 +5,8 @@ using UnityEngine;
 //<summary> This script is used for the Game Over Trigger! - Zander :3 </summary>
 public class GameOverTrigger : MonoBehaviour
 {
+    private SpriteRenderer sr;
+
     private bool isTriggerStay;
     public int currentCountDown = 0;
     public int maxCountDown = 5;
@@ -15,6 +17,8 @@ public class GameOverTrigger : MonoBehaviour
 
     private void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
+        sr.enabled = false;
         isTriggerStay = false;
         serviceHub = ServiceHub.Instance;
     }
@@ -23,12 +27,14 @@ public class GameOverTrigger : MonoBehaviour
     {
         isTriggerStay = true;
         StartCoroutine(CheckTrigger());
+        sr.enabled = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isTriggerStay = false;
         currentCountDown = 0;
+        sr.enabled = false;
     }
 
     IEnumerator CheckTrigger()

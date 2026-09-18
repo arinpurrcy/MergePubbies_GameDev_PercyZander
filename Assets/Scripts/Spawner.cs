@@ -9,8 +9,8 @@ public class Spawner : MonoBehaviour
     private Vector3 mousePos;
     private bool canSpawn = true;
 
-    private float minX;
-    private float maxX;
+    public float minX;
+    public float maxX;
     private float cooldown = .5f;
     private float lastSpawnTime;
 
@@ -22,7 +22,6 @@ public class Spawner : MonoBehaviour
     public GameObject pubbyPrefab;
     public GameObject nextPubbySpawner;
     public GameObject nextPubbyPrefab;
-    public GameObject nextPubbyDeleter; //Deletes the pubby on the Slope when a new one is spawned
 
     private GameObject clone;
 
@@ -33,13 +32,12 @@ public class Spawner : MonoBehaviour
         serviceHub = ServiceHub.Instance;
 
         currentX = 0;
-        minX = -5f;
-        maxX = 5f;
         lastSpawnTime = cooldown;
 
         currentPubby = 9;
         nextPubby = Random.Range(6, 10);
         gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubby];
+        gameObject.GetComponent<SpriteRenderer>().sortingOrder = currentPubby;
 
         clone = Instantiate(nextPubbyPrefab, nextPubbySpawner.transform.position, Quaternion.identity);
 
@@ -65,8 +63,7 @@ public class Spawner : MonoBehaviour
         {
             Instantiate(pubbyPrefab, transform.position, Quaternion.identity);
             StartCoroutine(ChangeCurrentPubby());
-            Destroy(clone.gameObject);
-            //StartCoroutine(DeleteNextPubby());
+            Destroy(clone);
         }
     }
 
@@ -88,7 +85,8 @@ public class Spawner : MonoBehaviour
             isEvilPubby = false;
             gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubby];
         }
-            
+        gameObject.GetComponent<SpriteRenderer>().sortingOrder = currentPubby;
+
         lastSpawnTime = 0f;
     }
 
@@ -100,13 +98,6 @@ public class Spawner : MonoBehaviour
             lastSpawnTime += .1f;
             yield return null;
         }
-    }
-
-    IEnumerator DeleteNextPubby()
-    {
-        nextPubbyDeleter.SetActive(true);
-        yield return new WaitForSeconds(1.5f);
-        nextPubbyDeleter.SetActive(false);
     }
 
     public void GameOver()
