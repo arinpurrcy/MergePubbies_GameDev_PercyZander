@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 //<summary> This script is used for the Game Over Trigger! - Zander :3 </summary>
 public class GameOverTrigger : MonoBehaviour
@@ -12,6 +13,7 @@ public class GameOverTrigger : MonoBehaviour
 
     public GameObject floor;
     public GameObject frontFloorSprite;
+    public float fadeOutTime;
 
     private ServiceHub serviceHub;
 
@@ -45,6 +47,7 @@ public class GameOverTrigger : MonoBehaviour
             if(isTriggerStay) currentCountDown++;
             if (currentCountDown >= maxCountDown)
             {
+                StartCoroutine(FadeImage());
                 floor.SetActive(false);
                 Camera.main.GetComponent<Animator>().enabled = true;
                 serviceHub.GameManager.GameOver();
@@ -55,8 +58,18 @@ public class GameOverTrigger : MonoBehaviour
         }
     }
 
-    IEnumerator FadeFloor()
+    IEnumerator FadeImage()
     {
-        yield break;
+        float alpha = 1f;
+
+        while(alpha > 0f)
+        {
+            yield return new WaitForSeconds(fadeOutTime);
+
+            alpha -= .1f;
+
+            frontFloorSprite.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, alpha);
+        }
+        frontFloorSprite.SetActive(false);
     }
 }

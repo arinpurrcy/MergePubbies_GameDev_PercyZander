@@ -936,7 +936,8 @@ MonoBehaviour:
   currentCountDown: 0
   maxCountDown: 5
   floor: {fileID: 1081439885}
-  frontFloorSprite: {fileID: 0}
+  frontFloorSprite: {fileID: 904123897}
+  fadeOutTime: 0.1
 --- !u!1 &283725190
 GameObject:
   m_ObjectHideFlags: 0
