@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 //<summary> This script is used for the Game Over Trigger! - Zander :3 </summary>
@@ -12,6 +11,7 @@ public class GameOverTrigger : MonoBehaviour
     public int maxCountDown = 5;
 
     public GameObject floor;
+    public GameObject frontFloorSprite;
 
     private ServiceHub serviceHub;
 
@@ -46,10 +46,17 @@ public class GameOverTrigger : MonoBehaviour
             if (currentCountDown >= maxCountDown)
             {
                 floor.SetActive(false);
+                Camera.main.GetComponent<Animator>().enabled = true;
+                serviceHub.GameManager.GameOver();
                 serviceHub.Spawner.GameOver();
                 yield break;
             }
             if (!isTriggerStay) currentCountDown = 0;
         }
+    }
+
+    IEnumerator FadeFloor()
+    {
+        yield break;
     }
 }

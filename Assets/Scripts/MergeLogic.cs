@@ -58,6 +58,11 @@ public class MergeLogic : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Lava")) Destroy(gameObject);
+    }
+
     private void UpgradePubby()
     {
         isEvilPubby = false;
@@ -76,10 +81,8 @@ public class MergeLogic : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = EvilPubbySprites[currentPubbyIndex];
             StartCoroutine(ExpandRadius());
         }
-        else
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = pubbySprites[currentPubbyIndex];
-        }
+        else gameObject.GetComponent<SpriteRenderer>().sprite = pubbySprites[currentPubbyIndex];
+        
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = currentPubbyIndex;
     }
 

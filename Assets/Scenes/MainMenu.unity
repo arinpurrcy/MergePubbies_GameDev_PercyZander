@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 21685579}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 980956604}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SwitchSettingsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &21685579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,7 +1315,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 580087905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 980956604}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SwitchCreditsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &580087905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2090,8 +2114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7381ce0b18c57a2419549d2565208ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  settingsMenu: {fileID: 0}
-  creditsMenu: {fileID: 0}
+  settingsMenu: {fileID: 1825698583}
+  creditsMenu: {fileID: 2073116242}
 --- !u!4 &980956605
 Transform:
   m_ObjectHideFlags: 0
@@ -3047,7 +3071,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1332624506}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 980956604}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SwitchCreditsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1332624506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4175,7 +4211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2073116243
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4410,7 +4446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2116931505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 980956604}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SwitchSettingsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2116931505
 MonoBehaviour:
   m_ObjectHideFlags: 0

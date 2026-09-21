@@ -15,6 +15,7 @@ TagManager:
   - Pom
   - Malt
   - Floor
+  - Lava
   layers:
   - Default
   - TransparentFX
