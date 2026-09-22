@@ -46,20 +46,23 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        mousePos = Input.mousePosition;
-        mousePos = Camera.main.ScreenToWorldPoint(mousePos); //Gets mouse position from screen to world coordinates
-        currentX = mousePos.x;
+        if (!serviceHub.UIManager.isPaused)
+        {
+            mousePos = Input.mousePosition;
+            mousePos = Camera.main.ScreenToWorldPoint(mousePos); //Gets mouse position from screen to world coordinates
+            currentX = mousePos.x;
 
-        //Prevents spawner from going past certain point
-        if (currentX < minX) currentX = minX;
-        else if (currentX > maxX) currentX = maxX;
+            //Prevents spawner from going past certain point
+            if (currentX < minX) currentX = minX;
+            else if (currentX > maxX) currentX = maxX;
 
-        transform.position = new Vector3(currentX, transform.position.y, transform.position.z);
+            transform.position = new Vector3(currentX, transform.position.y, transform.position.z);
+        }
     }
 
     public void SpawnObject(InputAction.CallbackContext context)
     {
-        if (context.performed && lastSpawnTime >= cooldown && canSpawn)
+        if (context.performed && lastSpawnTime >= cooldown && canSpawn && !serviceHub.UIManager.isPaused)
         {
             Instantiate(pubbyPrefab, transform.position, Quaternion.identity);
             StartCoroutine(ChangeCurrentPubby());

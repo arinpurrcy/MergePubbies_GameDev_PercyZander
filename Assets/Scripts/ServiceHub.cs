@@ -9,10 +9,12 @@ public class ServiceHub : MonoBehaviour
     [SerializeField] private Spawner spawner;
     [SerializeField] private MergeLogic mergelogic;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private UIManager uiManager;
 
     public Spawner Spawner => spawner;
     public MergeLogic MergeLogic => mergelogic;
     public GameManager GameManager => gameManager;
+    public UIManager UIManager => uiManager;
 
     private void Awake()
     {

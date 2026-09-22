@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 //<summary> This script is used for the Game Over Trigger! - Zander :3 </summary>
 public class GameOverTrigger : MonoBehaviour

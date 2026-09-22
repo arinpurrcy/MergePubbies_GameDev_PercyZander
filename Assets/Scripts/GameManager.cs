@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI currentScoreDisplay; //Calling these "Displays" instead of text so its not currentScoreText.text
     public TextMeshProUGUI highScoreDisplay;
 
+    private void Start()
+    {
+        highScoreDisplay.text = $"Best: {highScore}";
+    }
+
     public void AddScore(int scoreToAdd)
     {
         currentScore += scoreToAdd;
