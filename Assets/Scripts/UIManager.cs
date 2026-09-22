@@ -10,10 +10,12 @@ public class UIManager : MonoBehaviour
     public GameObject pauseMenu;
 
     public bool isPaused;
+    public bool isGameOver; //Will make it so you can't paused after GameOver is triggered
 
     private void Start()
     {
         isPaused = false;
+        isGameOver = false;
         Time.timeScale = 1;
     }
 
@@ -48,7 +50,7 @@ public class UIManager : MonoBehaviour
     public void TogglePause()
     {
         //This method can be used for both pausing and unpausing, so not calling this method a button
-        
+
         isPaused = !isPaused; //Flips true or false
         pauseMenu.SetActive(!pauseMenu.activeSelf); //Toggles menu
 

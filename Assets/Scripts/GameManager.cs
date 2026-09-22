@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        currentScoreDisplay.enabled = false;
-        highScoreDisplay.enabled = false;
+        //currentScoreDisplay.enabled = false;
+        //highScoreDisplay.enabled = false;
     }
 }

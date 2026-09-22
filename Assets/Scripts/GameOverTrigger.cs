@@ -22,28 +22,41 @@ public class GameOverTrigger : MonoBehaviour
         sr.enabled = false;
         isTriggerStay = false;
         serviceHub = ServiceHub.Instance;
+
+        StartCoroutine(CheckTrigger());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isTriggerStay = true;
-        StartCoroutine(CheckTrigger());
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         sr.enabled = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isTriggerStay = false;
-        currentCountDown = 0;
         sr.enabled = false;
     }
 
     IEnumerator CheckTrigger()
     {
-        while (isTriggerStay)
+        while (true)
         {
+            if (!isTriggerStay)
+            {
+                currentCountDown = 0;
+                yield return null;
+                continue;
+            }
+
             yield return new WaitForSeconds(1f);
-            if(isTriggerStay) currentCountDown++;
+
+            if (isTriggerStay) currentCountDown++;
+
             if (currentCountDown >= maxCountDown)
             {
                 StartCoroutine(FadeImage());
@@ -53,7 +66,6 @@ public class GameOverTrigger : MonoBehaviour
                 serviceHub.Spawner.GameOver();
                 yield break;
             }
-            if (!isTriggerStay) currentCountDown = 0;
         }
     }
 
