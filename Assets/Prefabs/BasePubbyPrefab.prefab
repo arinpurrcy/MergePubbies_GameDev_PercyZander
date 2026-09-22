@@ -5006,6 +5006,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78d808ab4dd6a447813da95eb762b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MergeLogic
+  pubbyRadius:
+  - 2.5
+  - 2.2
+  - 1.85
+  - 1.55
+  - 1.25
+  - 1.1
+  - 0.82
+  - 0.65
+  - 0.48
+  - 0.32
   pubbySprites:
   - {fileID: 1593593982352027420, guid: 6e9c56c586c53f4428ab81dfa576f49f, type: 3}
   - {fileID: -2133162120039868347, guid: 6e9c56c586c53f4428ab81dfa576f49f, type: 3}
@@ -5024,9 +5035,9 @@ MonoBehaviour:
   - {fileID: 7002011959284140092, guid: 6e9c56c586c53f4428ab81dfa576f49f, type: 3}
   - {fileID: -511491197121387532, guid: 6e9c56c586c53f4428ab81dfa576f49f, type: 3}
   - {fileID: -6460651446385903716, guid: 6e9c56c586c53f4428ab81dfa576f49f, type: 3}
-  - {fileID: 4942184995833572233, guid: 6e9c56c586c53f4428ab81dfa576f49f, type: 3}
-  - {fileID: -1910071712981166787, guid: 6e9c56c586c53f4428ab81dfa576f49f, type: 3}
-  - {fileID: 7942485868017062913, guid: 6e9c56c586c53f4428ab81dfa576f49f, type: 3}
-  - {fileID: -8731938620949233214, guid: 6e9c56c586c53f4428ab81dfa576f49f, type: 3}
+  - {fileID: -2450575411582382689, guid: 8f84038676407df4cbc893e526a51aa7, type: 3}
+  - {fileID: -8200817230559817173, guid: 8f84038676407df4cbc893e526a51aa7, type: 3}
+  - {fileID: 6206054734150218386, guid: 8f84038676407df4cbc893e526a51aa7, type: 3}
+  - {fileID: -8206855651336184364, guid: 8f84038676407df4cbc893e526a51aa7, type: 3}
   expandSpeed: 0.1
   isEvilPubby: 0

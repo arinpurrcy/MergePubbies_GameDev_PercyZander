@@ -51,11 +51,14 @@ public class UIManager : MonoBehaviour
     {
         //This method can be used for both pausing and unpausing, so not calling this method a button
 
-        isPaused = !isPaused; //Flips true or false
-        pauseMenu.SetActive(!pauseMenu.activeSelf); //Toggles menu
+        if (!isGameOver)
+        {
+            isPaused = !isPaused; //Flips true or false
+            pauseMenu.SetActive(!pauseMenu.activeSelf); //Toggles menu
 
-        if (!isPaused) Time.timeScale = 1; //not Paused
-        else Time.timeScale = 0; //Paused
+            if (!isPaused) Time.timeScale = 1; //not Paused
+            else Time.timeScale = 0; //Paused
+        }
     }
 
     public void QuitGameButton()

@@ -28,10 +28,4 @@ public class GameManager : MonoBehaviour
         currentScoreDisplay.text = $"Score: {currentScore}";
         highScoreDisplay.text = $"Best: {highScore}";
     }
-
-    public void GameOver()
-    {
-        //currentScoreDisplay.enabled = false;
-        //highScoreDisplay.enabled = false;
-    }
 }

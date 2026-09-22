@@ -26,13 +26,9 @@ public class GameOverTrigger : MonoBehaviour
         StartCoroutine(CheckTrigger());
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        isTriggerStay = true;
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
+        isTriggerStay = true;
         sr.enabled = true;
     }
 
@@ -40,6 +36,8 @@ public class GameOverTrigger : MonoBehaviour
     {
         isTriggerStay = false;
         sr.enabled = false;
+
+        StartCoroutine(QuickCheckTrigger());
     }
 
     IEnumerator CheckTrigger()
@@ -62,11 +60,18 @@ public class GameOverTrigger : MonoBehaviour
                 StartCoroutine(FadeImage());
                 floor.SetActive(false);
                 Camera.main.GetComponent<Animator>().enabled = true;
-                serviceHub.GameManager.GameOver();
                 serviceHub.Spawner.GameOver();
+                serviceHub.UIManager.isGameOver = true;
                 yield break;
             }
         }
+    }
+
+    IEnumerator QuickCheckTrigger() //Used to reset counter when collider leaves
+    {
+        yield return new WaitForSeconds(.1f);
+
+        if(!isTriggerStay) currentCountDown = 0;
     }
 
     IEnumerator FadeImage()
