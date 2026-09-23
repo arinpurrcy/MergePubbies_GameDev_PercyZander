@@ -6333,7 +6333,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c7a25274056bb4f4c8b016ce0df01b55, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8556,6 +8556,7 @@ MonoBehaviour:
   creditsMenu: {fileID: 0}
   pauseMenu: {fileID: 1478518968}
   isPaused: 0
+  isGameOver: 0
 --- !u!4 &1820147198
 Transform:
   m_ObjectHideFlags: 0
