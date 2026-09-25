@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip successAudioClip;
     public AudioClip gameOverAudioClip;
+    public AudioClip introludeAudioClip;
+    public AudioClip gameplayAudioClip;
 
     public Slider musicSlider;
     public Slider pubbieBarkSlider;
@@ -50,6 +52,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayIntrolude()
     {
+        musicAudioSource.clip = introludeAudioClip;
         musicAudioSource.Play();
     }
 
@@ -63,6 +66,12 @@ public class AudioManager : MonoBehaviour
     {
         pubbieBarkAudioSource.clip = bark;
         pubbieBarkAudioSource.Play();
+    }
+
+    public void PlayGameplay()
+    {
+        musicAudioSource.clip = gameplayAudioClip;
+        musicAudioSource.Play();
     }
 
     public void PlayGameOver()

@@ -12,6 +12,9 @@ public class LoadingScreen : MonoBehaviour
     public GameObject readyScreen;
     public GameObject goScreen;
 
+    public GameObject gamePlay;
+    public GameObject loadingScreen;
+
     private void Start()
     {
         serviceHub = ServiceHub.Instance;
@@ -26,9 +29,11 @@ public class LoadingScreen : MonoBehaviour
         yield return new WaitForSeconds(randomLoadTime);
         readyScreen.SetActive(true);
         serviceHub.AudioManager.PlayIntrolude();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.7f);
         goScreen.SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(2);
+        serviceHub.AudioManager.PlayGameplay();
+        gamePlay.SetActive(true);
+        loadingScreen.SetActive(false);
     }
 }
