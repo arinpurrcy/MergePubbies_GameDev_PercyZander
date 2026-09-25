@@ -1362,6 +1362,7 @@ MonoBehaviour:
   mergelogic: {fileID: 1570819863583289356, guid: d5943d845cfcc38469f994340baa5a25, type: 3}
   gameManager: {fileID: 1632111309}
   uiManager: {fileID: 1820147197}
+  audioManager: {fileID: 576749099}
 --- !u!1 &207078520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2974,6 +2975,7 @@ MonoBehaviour:
   musicAudioSource: {fileID: 1198421557}
   pubbieBarkAudioSource: {fileID: 929394829}
   sfxAudioSource: {fileID: 89277592}
+  successAudioClip: {fileID: 8300000, guid: bb3d6a1b1eba60e489637b8f2b60150f, type: 3}
   musicSlider: {fileID: 1175066567}
   pubbieBarkSlider: {fileID: 1576330635}
   sfxSlider: {fileID: 950323197}

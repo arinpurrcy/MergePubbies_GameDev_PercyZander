@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource pubbieBarkAudioSource;
     public AudioSource sfxAudioSource;
 
+    public AudioClip successAudioClip;
+
     public Slider musicSlider;
     public Slider pubbieBarkSlider;
     public Slider sfxSlider;
@@ -43,5 +45,16 @@ public class AudioManager : MonoBehaviour
     {
         sfxAudioSource.volume = value;
         sfxVolume = value;
+    }
+
+    public void PlayIntrolude()
+    {
+        musicAudioSource.Play();
+    }
+
+    public void PlaySuccess()
+    {
+        sfxAudioSource.clip = successAudioClip;
+        sfxAudioSource.Play();
     }
 }

@@ -68,7 +68,11 @@ public class MergeLogic : MonoBehaviour
         isEvilPubby = false;
         greenAura.Stop();
         currentPubbyIndex--;
-        if(currentPubbyIndex < 0) Destroy(gameObject);
+        if(currentPubbyIndex < 0)
+        {
+            serviceHub.AudioManager.PlaySuccess();
+            Destroy(gameObject);
+        }
         else UpdatePubbyInformation();
     }
 

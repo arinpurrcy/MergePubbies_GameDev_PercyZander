@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 //<Summary> This script is used for the fake loading screen before the actual gameplay
 public class LoadingScreen : MonoBehaviour
 {
+    private ServiceHub serviceHub;
+
     private float randomLoadTime;
 
     public GameObject readyScreen;
@@ -12,6 +14,8 @@ public class LoadingScreen : MonoBehaviour
 
     private void Start()
     {
+        serviceHub = ServiceHub.Instance;
+
         randomLoadTime = Random.Range(3, 5);
 
         StartCoroutine(StartLoading());
@@ -21,6 +25,7 @@ public class LoadingScreen : MonoBehaviour
     {
         yield return new WaitForSeconds(randomLoadTime);
         readyScreen.SetActive(true);
+        serviceHub.AudioManager.PlayIntrolude();
         yield return new WaitForSeconds(1.5f);
         goScreen.SetActive(true);
         yield return new WaitForSeconds(1.5f);

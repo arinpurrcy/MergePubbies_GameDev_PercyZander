@@ -10,11 +10,13 @@ public class ServiceHub : MonoBehaviour
     [SerializeField] private MergeLogic mergelogic;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private UIManager uiManager;
+    [SerializeField] private AudioManager audioManager;
 
     public Spawner Spawner => spawner;
     public MergeLogic MergeLogic => mergelogic;
     public GameManager GameManager => gameManager;
     public UIManager UIManager => uiManager;
+    public AudioManager AudioManager => audioManager;
 
     private void Awake()
     {
