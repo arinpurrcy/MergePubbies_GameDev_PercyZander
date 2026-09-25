@@ -2996,6 +2996,7 @@ MonoBehaviour:
   musicAudioSource: {fileID: 204264138}
   pubbieBarkAudioSource: {fileID: 189116525}
   sfxAudioSource: {fileID: 1861171733}
+  successAudioClip: {fileID: 0}
   musicSlider: {fileID: 1850402068}
   pubbieBarkSlider: {fileID: 2028070104}
   sfxSlider: {fileID: 182939625}

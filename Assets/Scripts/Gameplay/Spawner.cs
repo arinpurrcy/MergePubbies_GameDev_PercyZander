@@ -23,6 +23,8 @@ public class Spawner : MonoBehaviour
     public GameObject nextPubbySpawner;
     public GameObject nextPubbyPrefab;
 
+    private AudioClip[] pubbyBarks;
+
     private GameObject clone;
 
     private ServiceHub serviceHub;
@@ -30,6 +32,8 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         serviceHub = ServiceHub.Instance;
+
+        pubbyBarks = Resources.LoadAll<AudioClip>("Barks"); //Takes barks from audio folder
 
         currentX = 0;
         lastSpawnTime = cooldown;
@@ -64,6 +68,9 @@ public class Spawner : MonoBehaviour
     {
         if (context.performed && lastSpawnTime >= cooldown && canSpawn && !serviceHub.UIManager.isPaused)
         {
+            AudioClip randomBark = pubbyBarks[Random.Range(0, pubbyBarks.Length)];
+            serviceHub.AudioManager.PlayBark(randomBark);
+
             Instantiate(pubbyPrefab, transform.position, Quaternion.identity);
             StartCoroutine(ChangeCurrentPubby());
             Destroy(clone);

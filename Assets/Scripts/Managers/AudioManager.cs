@@ -57,4 +57,10 @@ public class AudioManager : MonoBehaviour
         sfxAudioSource.clip = successAudioClip;
         sfxAudioSource.Play();
     }
+
+    public void PlayBark(AudioClip bark)
+    {
+        pubbieBarkAudioSource.clip = bark;
+        pubbieBarkAudioSource.Play();
+    }
 }

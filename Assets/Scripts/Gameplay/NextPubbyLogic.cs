@@ -16,6 +16,5 @@ public class NextPubbyLogic : MonoBehaviour
         //Update Pubby Information
         gameObject.GetComponent<CircleCollider2D>().radius = serviceHub.MergeLogic.pubbyRadius[currentPubbyIndex];
         gameObject.GetComponent<SpriteRenderer>().sprite = serviceHub.MergeLogic.pubbySprites[currentPubbyIndex]; //Pubby on Slope will not show that it's evil
-        gameObject.GetComponent<SpriteRenderer>().sortingOrder = currentPubbyIndex;
     }
 }

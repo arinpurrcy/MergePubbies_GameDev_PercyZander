@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
         {
             isPaused = !isPaused; //Flips true or false
             pauseMenu.SetActive(!pauseMenu.activeSelf); //Toggles menu
+            settingsMenu.SetActive(false); //Makes sure settings is always off when pausing or unpausing
 
             if (!isPaused) Time.timeScale = 1; //not Paused
             else Time.timeScale = 0; //Paused
