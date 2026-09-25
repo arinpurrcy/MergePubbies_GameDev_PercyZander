@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource sfxAudioSource;
 
     public AudioClip successAudioClip;
+    public AudioClip gameOverAudioClip;
 
     public Slider musicSlider;
     public Slider pubbieBarkSlider;
@@ -62,5 +63,11 @@ public class AudioManager : MonoBehaviour
     {
         pubbieBarkAudioSource.clip = bark;
         pubbieBarkAudioSource.Play();
+    }
+
+    public void PlayGameOver()
+    {
+        musicAudioSource.clip = gameOverAudioClip;
+        musicAudioSource.Play();
     }
 }

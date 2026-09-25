@@ -3153,6 +3153,7 @@ MonoBehaviour:
   pubbieBarkAudioSource: {fileID: 929394829}
   sfxAudioSource: {fileID: 89277592}
   successAudioClip: {fileID: 8300000, guid: bb3d6a1b1eba60e489637b8f2b60150f, type: 3}
+  gameOverAudioClip: {fileID: 8300000, guid: 2eb1e34c989a8d149a062dddd380879b, type: 3}
   musicSlider: {fileID: 1175066567}
   pubbieBarkSlider: {fileID: 1576330635}
   sfxSlider: {fileID: 950323197}

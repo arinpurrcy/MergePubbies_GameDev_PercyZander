@@ -61,6 +61,7 @@ public class GameOverTrigger : MonoBehaviour
 
             if (currentCountDown >= maxCountDown)
             {
+                serviceHub.AudioManager.musicAudioSource.Stop();
                 StartCoroutine(FadeImage());
                 floor.SetActive(false);
                 Camera.main.GetComponent<Animator>().enabled = true;
@@ -104,5 +105,6 @@ public class GameOverTrigger : MonoBehaviour
             gameOverScreen.color = new Color(1, 1, 1, alpha);
         }
         gameOverUI.SetActive(true);
+        serviceHub.AudioManager.PlayGameOver();
     }
 }
