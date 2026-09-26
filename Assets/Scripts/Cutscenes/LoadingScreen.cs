@@ -1,6 +1,6 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 //<Summary> This script is used for the fake loading screen before the actual gameplay
 public class LoadingScreen : MonoBehaviour
@@ -15,11 +15,16 @@ public class LoadingScreen : MonoBehaviour
     public GameObject gamePlay;
     public GameObject loadingScreen;
 
+    public TextMeshProUGUI tipDisplay;
+    public string[] tips;
+
     private void Start()
     {
         serviceHub = ServiceHub.Instance;
 
         randomLoadTime = Random.Range(3, 5);
+
+        tipDisplay.text = $"Tip: {tips[Random.Range(0, tips.Length)]}";
 
         StartCoroutine(StartLoading());
     }
