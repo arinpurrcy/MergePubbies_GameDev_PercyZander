@@ -2462,6 +2462,7 @@ Transform:
   - {fileID: 819056366}
   - {fileID: 1424229147}
   - {fileID: 1338223838}
+  - {fileID: 305205058}
   m_Father: {fileID: 126483871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &305205057
@@ -2491,7 +2492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305205057}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.04303, y: -1.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2508,7 +2509,7 @@ Transform:
   - {fileID: 2126506457}
   - {fileID: 1596417902}
   - {fileID: 684457254}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 302134981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &305205059
 Rigidbody2D:
@@ -7800,8 +7801,9 @@ GameObject:
   - component: {fileID: 1193521182}
   - component: {fileID: 1193521184}
   - component: {fileID: 1193521183}
+  - component: {fileID: 1193521185}
   m_Layer: 5
-  m_Name: TutorialText (1)
+  m_Name: TutorialText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7823,7 +7825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1184, y: -97.367}
+  m_AnchoredPosition: {x: 1373, y: -16.217}
   m_SizeDelta: {x: 489.24, y: 164.98}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1193521183
@@ -7857,8 +7859,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4288371801
+  m_fontColor: {r: 0.34901962, g: 0.36078432, b: 0.60784316, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7928,6 +7930,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193521181}
   m_CullTransparentMesh: 1
+--- !u!114 &1193521185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193521181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ed63fd1b8a8894680ec4e653d438d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialText
+  deletionTime: 20
 --- !u!1 &1198421555
 GameObject:
   m_ObjectHideFlags: 0
@@ -14026,6 +14041,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 126483871}
-  - {fileID: 305205058}
   - {fileID: 565775366}
   - {fileID: 287634126}

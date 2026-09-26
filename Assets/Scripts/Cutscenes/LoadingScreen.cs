@@ -29,7 +29,7 @@ public class LoadingScreen : MonoBehaviour
         yield return new WaitForSeconds(randomLoadTime);
         readyScreen.SetActive(true);
         serviceHub.AudioManager.PlayIntrolude();
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSeconds(1.6f);
         goScreen.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         serviceHub.AudioManager.PlayGameplay();
