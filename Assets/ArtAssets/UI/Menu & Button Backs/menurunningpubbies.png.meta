@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 95a772892554dbe4baf9fd743e84924e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6973638264200323500
+    second: menurunningpubbies_0
+  - first:
+      213: 255825218022155847
+    second: menurunningpubbies_1
+  - first:
+      213: 719918735981136803
+    second: menurunningpubbies_2
+  - first:
+      213: -6807605238308250123
+    second: menurunningpubbies_3
+  - first:
+      213: -6327347596121906706
+    second: menurunningpubbies_4
+  - first:
+      213: -2372964490862163011
+    second: menurunningpubbies_5
+  - first:
+      213: 6596419935144127385
+    second: menurunningpubbies_6
+  - first:
+      213: -459350358489458676
+    second: menurunningpubbies_7
+  - first:
+      213: -823973394506619582
+    second: menurunningpubbies_8
+  - first:
+      213: -645716619203491205
+    second: menurunningpubbies_9
+  - first:
+      213: -6919678873740211732
+    second: menurunningpubbies_10
+  - first:
+      213: -5937346112808636629
+    second: menurunningpubbies_11
+  - first:
+      213: -4672534381049947269
+    second: menurunningpubbies_12
+  - first:
+      213: -3991853964137134462
+    second: menurunningpubbies_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: menurunningpubbies_0
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 1306
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e944652f8a83f90800000000000000
+      internalID: -6973638264200323500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_1
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1314
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7462ccc2eafdc8300800000000000000
+      internalID: 255825218022155847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_2
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 1260
+        width: 148
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abcd4da64aadf900800000000000000
+      internalID: 719918735981136803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_3
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1285
+        width: 80
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd5c8f9a178681a0800000000000000
+      internalID: -6807605238308250123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_4
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1169
+        width: 278
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee16bb292eeb038a0800000000000000
+      internalID: -6327347596121906706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_5
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1206
+        width: 125
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb8b893e59811fd0800000000000000
+      internalID: -2372964490862163011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_6
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 1225
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b229f4bf03b8b50800000000000000
+      internalID: 6596419935144127385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_7
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 1220
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0899ce584f00a9f0800000000000000
+      internalID: -459350358489458676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_8
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 1192
+        width: 20
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2456f043098a094f0800000000000000
+      internalID: -823973394506619582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_9
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 25
+        width: 1079
+        height: 979
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a4fcee724f907f0800000000000000
+      internalID: -645716619203491205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_10
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 50
+        width: 909
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce980f2f9bc58ff90800000000000000
+      internalID: -6919678873740211732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_11
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 699
+        width: 645
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2fae75fa2f4a9da0800000000000000
+      internalID: -5937346112808636629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_12
+      rect:
+        serializedVersion: 2
+        x: 2552
+        y: 374
+        width: 302
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7bd7b09cb2d72fb0800000000000000
+      internalID: -4672534381049947269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menurunningpubbies_13
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 338
+        width: 23
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2860f5828f51a98c0800000000000000
+      internalID: -3991853964137134462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      menurunningpubbies_0: -6973638264200323500
+      menurunningpubbies_1: 255825218022155847
+      menurunningpubbies_10: -6919678873740211732
+      menurunningpubbies_11: -5937346112808636629
+      menurunningpubbies_12: -4672534381049947269
+      menurunningpubbies_13: -3991853964137134462
+      menurunningpubbies_2: 719918735981136803
+      menurunningpubbies_3: -6807605238308250123
+      menurunningpubbies_4: -6327347596121906706
+      menurunningpubbies_5: -2372964490862163011
+      menurunningpubbies_6: 6596419935144127385
+      menurunningpubbies_7: -459350358489458676
+      menurunningpubbies_8: -823973394506619582
+      menurunningpubbies_9: -645716619203491205
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
